@@ -56,7 +56,8 @@ public extension WhatsNew.Feature.Image {
         name: String,
         bundle: Bundle = .main,
         renderingMode: Image.TemplateRenderingMode? = .template,
-        foregroundColor: Color? = .accentColor
+        foregroundColor: Color? = .accentColor,
+        scale: Image.Scale = .large
     ) {
         self.init {
             Image(
@@ -65,7 +66,7 @@ public extension WhatsNew.Feature.Image {
             )
             .renderingMode(renderingMode)
             .font(.title)
-            .imageScale(.large)
+            .imageScale(scale)
             .foregroundColor(foregroundColor)
         }
     }
@@ -84,7 +85,8 @@ public extension WhatsNew.Feature.Image {
     init(
         systemName: String,
         renderingMode: Image.TemplateRenderingMode? = .template,
-        foregroundColor: Color? = .accentColor
+        foregroundColor: Color = .accentColor,
+        scale: Image.Scale = .large
     ) {
         self.init {
             Image(
@@ -92,7 +94,7 @@ public extension WhatsNew.Feature.Image {
             )
             .renderingMode(renderingMode)
             .font(.title)
-            .imageScale(.large)
+            .imageScale(scale)
             .foregroundColor(foregroundColor)
         }
     }
@@ -108,7 +110,8 @@ public extension WhatsNew.Feature.Image {
         systemName: String,
         renderingMode: Image.TemplateRenderingMode? = .template,
         symbolRenderingMode: SymbolRenderingMode?,
-        foregroundColor: Color? = .accentColor
+        foregroundColor: Color = .accentColor,
+        scale: Image.Scale = .large
     ) {
         self.init {
             Image(
@@ -117,8 +120,8 @@ public extension WhatsNew.Feature.Image {
             .renderingMode(renderingMode)
             .symbolRenderingMode(symbolRenderingMode)
             .font(.title)
-            .imageScale(.large)
-            .foregroundColor(foregroundColor)
+            .imageScale(scale)
+            .foregroundStyle(foregroundColor)
         }
     }
     
